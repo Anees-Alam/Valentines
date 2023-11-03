@@ -1,0 +1,10 @@
+/* SPA --> single page application
+on the client side */
+// IIFE --> immediately invoked function expression
+(function(){
+    function Start()
+    {
+        console.log("App Started");
+    }
+    window.addEventListener("load", Start);
+})();
