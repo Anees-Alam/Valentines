@@ -1,7 +1,46 @@
-<div id="video">
-    <video width="320" height="240" style="margin-top: 40px;" controls> 
-    <source src="/Assets/images/aboutme.mp4" type="video/mp4">
-</div>
+
+
+<!-- example.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes/No Question</title>
+</head>
+<body>
+    <h1>Do you like programming?</h1>
+    
+    <form action="/submit-answer" method="post" onsubmit="displayImage()">
+        
+        <label>
+            <input type="radio" name="answer" value="yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="answer" value="no"> No
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <img id="resultImage" src="" style="display: none;">
+
+    <script>
+        function displayImage() {
+            var answer = document.querySelector('input[name="answer"]:checked').value;
+            var img = document.getElementById('resultImage');
+            if (answer === "yes") {
+                img.src = "/assets/images/networking.png"; // Set the path to your 'yes' image
+            } else {
+                img.src = "/assets/images/jn custom.png"; // Set the path to your 'no' image
+            }
+            img.style.display = "block"; // Show the image
+            return false; // Prevent the form from submitting normally
+        }
+    </script>
+</body>
+</html>
+
 
 
 <style>
@@ -12,10 +51,4 @@
         background: radial-gradient(circle, rgb(1, 33, 243) 0%, rgb(15, 186, 243) 71%);
     }
 
-    #video{
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
-        height: 400px;
-        } 
 </style>

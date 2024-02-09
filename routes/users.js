@@ -6,4 +6,5 @@ router.get('/', function(req, res, next) {
   res.send('This is for users');
 });
 
+
 module.exports = router;
