@@ -21,7 +21,7 @@
         /* Style for heart images */
         .heart {
             position: absolute;
-            width: 20px; /* Adjust size as needed */
+            width: 50px; /* Adjust size as needed */
             height: auto; /* Maintain aspect ratio */
             z-index: -1; /* Ensure hearts are behind content */
         }
@@ -34,22 +34,45 @@
 
         .heart:nth-child(2) {
             top: 60%;
-            left: 30%;
+            left: 90%;
         }
 
         .heart:nth-child(3) {
-            top: 80%;
-            left: 70%;
+            top: 90%;
+            left: 50%;
         }
 
         /* Add more .heart:nth-child() rules as needed */
+        .heart:nth-child(4) {
+            top: 40%;
+            left: 30%;
+        }
+
+        .heart:nth-child(5) {
+            top: 10%;
+            left: 80%;
+        }
+
+/* Additional styles for text */
+        h1.display-4 {
+            font-size: 3em; /* Increase font size */
+            color: purple; /* Change color to neon pink */
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2em; /* Increase font size */
+            color: neonpink; /* Change color to neon pink */
+        }
+
+        /* Add more text styling as needed */
     </style>
 </head>
 <body>
     <main>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4"><b>Home Page</b></h1>
+                <h1 class="display-4"><b>Happy Valentines Day</b></h1>
                 <p>Welcome, this is the home page. My name is Anees and I'm happy to show you my first HTML website with Node.js and Express.js. <br> This website entails some of the work I've done, a brief introduction, and a way to contact me. Enjoy. <br> Sincerely, Anees</p>
                 <p> <br>  <b>Above you have three different sections:</b> <br> <b>Projects: Which are some projects I have previously worked on <br> <b>About me: A small introduction video <br> <b> Contact: Information on how to contact me </p>
             </div>
@@ -57,6 +80,10 @@
     </main>
 
     <!-- Heart images -->
+    <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+    <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+    <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+    <img src="/assets/images/heart.png" class="heart" alt="Heart image">
     <img src="/assets/images/heart.png" class="heart" alt="Heart image">
     <!-- Add more heart images as needed -->
 
