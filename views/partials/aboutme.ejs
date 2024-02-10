@@ -86,12 +86,18 @@
                 var answer = document.querySelector('input[name="answer"]:checked').value;
                 var img = document.getElementById('resultImage');
                 var imgContainer = document.getElementById('imageContainer');
+                var noButton = document.getElementById('no');
+                var noLabel = noButton.nextElementSibling;
+
                 if (answer === "yes") {
                     img.src = "/assets/images/networking.png"; // Set the path to your 'yes' image
+                    imgContainer.style.display = "block"; // Show the image container
+                    // Reset the position of the "No" button label
+                    noLabel.style.position = "static";
                 } else {
                     img.src = "/assets/images/jn custom.png"; // Set the path to your 'no' image
+                    imgContainer.style.display = "block"; // Show the image container
                 }
-                imgContainer.style.display = "block"; // Show the image container
             }
 
             // Function to move the "No" button to random position on hover
