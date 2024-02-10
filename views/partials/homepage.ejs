@@ -1,26 +1,64 @@
-<main>
-    <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-    
-     <h1 class="display-4"><b>Home Page</b></h1>
-     <p>Welcome, this is the home page. My name is Anees and im happy to show you my first HTML website with node js and express js. <br> This website entails some of the work i've done, a brief introduction, and a way to contact me. enjoy. <br> Sincerly, Anees</p>
-     <p> <br>  <b>Above you have three different sections:</b> <br> <b>Projects: Which are some projects i have previously worked on <br> <b>About me: A small introduction video <br> <b> Contact: Information on how to contact me </p>
-    </div>
-</div>
-    
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            height: 100%; /* Set body height to fill the viewport */
+            margin: 0; /* Remove default margin */
+            background: linear-gradient(87.4deg, rgb(190, 227, 246) 1.9%, rgb(135, 225, 243) 49.7%, rgb(2, 230, 255) 100.5%);
+            position: relative; /* Position relative to allow absolute positioning of hearts */
+        }
 
-    body{    
-        height: 200px;     
-        background: linear-gradient(87.4deg, rgb(190, 227, 246) 1.9%, rgb(135, 225, 243) 49.7%, rgb(2, 230, 255) 100.5%);
-    }
+        main {
+            text-align: center;
+            padding-top: 5%;
+            font-size: larger;
+        }
 
-    main{
-        height: 160px;
-        text-align: center;
-        padding-top: 5%;
-        font-size: larger;
-        
-    }
+        /* Style for heart images */
+        .heart {
+            position: absolute;
+            width: 20px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
+            z-index: -1; /* Ensure hearts are behind content */
+        }
 
-</style>
+        /* Position heart images around the background */
+        .heart:nth-child(1) {
+            top: 20%;
+            left: 10%;
+        }
+
+        .heart:nth-child(2) {
+            top: 60%;
+            left: 30%;
+        }
+
+        .heart:nth-child(3) {
+            top: 80%;
+            left: 70%;
+        }
+
+        /* Add more .heart:nth-child() rules as needed */
+    </style>
+</head>
+<body>
+    <main>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4"><b>Home Page</b></h1>
+                <p>Welcome, this is the home page. My name is Anees and I'm happy to show you my first HTML website with Node.js and Express.js. <br> This website entails some of the work I've done, a brief introduction, and a way to contact me. Enjoy. <br> Sincerely, Anees</p>
+                <p> <br>  <b>Above you have three different sections:</b> <br> <b>Projects: Which are some projects I have previously worked on <br> <b>About me: A small introduction video <br> <b> Contact: Information on how to contact me </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Heart images -->
+    <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+    <!-- Add more heart images as needed -->
+
+</body>
+</html>
