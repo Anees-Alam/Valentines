@@ -8,7 +8,7 @@
         body {
             height: 450px;
             background: rgb(68, 245, 121);
-            background: radial-gradient(circle, rgb(1, 33, 243) 0%, rgb(15, 186, 243) 71%);
+            background: linear-gradient(87.4deg, rgb(190, 227, 246) 1.9%, rgb(135, 225, 243) 49.7%, rgb(2, 230, 255) 100.5%);
         }
 
         .btn-container {
@@ -65,7 +65,7 @@
 </head>
 <body>
     <div style="text-align: center;">
-        <h1>Do you like programming?</h1>
+        <h1>Will you be my valentine?</h1>
 
         <div class="btn-container">
             <input type="radio" id="yes" name="answer" value="yes" class="btn" onclick="displayImage()">
@@ -90,7 +90,7 @@
                 var noLabel = noButton.nextElementSibling;
 
                 if (answer === "yes") {
-                    img.src = "/assets/images/networking.png"; // Set the path to your 'yes' image
+                    img.src = "/assets/images/yay.png"; // Set the path to your 'yes' image
                     imgContainer.style.display = "block"; // Show the image container
                     // Reset the position of the "No" button label
                     noLabel.style.position = "static";
