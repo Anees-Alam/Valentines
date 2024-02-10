@@ -28,7 +28,7 @@
             background-color: #ffffff;
             border: 2px solid transparent;
             border-radius: 5px;
-            transition: background-color 0.3s, border-color 0.3s;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
         }
 
         .btn:hover + label {
@@ -43,6 +43,23 @@
         #yes:checked + label, #no:checked + label {
             background-color: #f0f0f0;
             border-color: #999999;
+        }
+
+        /* Enlarge "Yes" button on hover */
+        #yes + label:hover {
+            transform: scale(2);
+        }
+
+        /* Shrink "No" button on hover */
+        /*#no + label:hover {
+            transform: scale(0.01);
+        }*/
+
+        h1 {
+            color: purple; /* Change the color to purple */
+            font-size: 3em; /* Increase font size */
+            font-weight: bold;
+            padding: 2%;
         }
     </style>
 </head>
@@ -76,6 +93,22 @@
                 }
                 imgContainer.style.display = "block"; // Show the image container
             }
+
+            // Function to move the "No" button to random position on hover
+            function moveNoButton() {
+                var noButton = document.getElementById('no');
+                noButton.disabled = true; // Disable the button to prevent clicking while moving
+                var label = noButton.nextElementSibling;
+                label.style.position = "absolute";
+                label.style.left = Math.random() * (window.innerWidth - label.offsetWidth) + "px";
+                label.style.top = Math.random() * (window.innerHeight - label.offsetHeight) + "px";
+                setTimeout(function() {
+                    noButton.disabled = false; // Re-enable the button after moving
+                }, 1000); // Change the delay as needed
+            }
+            
+            // Attach moveNoButton function to mouseover event of the "No" button label
+            document.getElementById('no').nextElementSibling.addEventListener('mouseover', moveNoButton);
         </script>
     </div>
 </body>
