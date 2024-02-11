@@ -32,7 +32,7 @@
         }
 
         .btn:hover + label {
-            background-color: #f0f0f0;
+            background-color: pink;
         }
 
         .btn:checked + label {
@@ -40,14 +40,14 @@
             border-color: #999999;
         }
 
-        #yes:checked + label, #no:checked + label {
-            background-color: #f0f0f0;
+        #yes:checked + label, #yes + label:hover {
+            background-color: pink;
             border-color: #999999;
         }
 
         /* Enlarge "Yes" button on hover */
         #yes + label:hover {
-            transform: scale(2);
+            transform: scale(3);
         }
 
         /* Shrink "No" button on hover */
@@ -56,10 +56,21 @@
         }*/
 
         h1 {
-            color: purple; /* Change the color to purple */
+            color: salmon; /* Change the color to purple */
             font-size: 3em; /* Increase font size */
             font-weight: bold;
             padding: 2%;
+        }
+
+        /* Add transition for image container opacity */
+        #imageContainer {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Show image container when opacity is 1 */
+        #imageContainer.show {
+            opacity: 1;
         }
     </style>
 </head>
@@ -69,15 +80,15 @@
 
         <div class="btn-container">
             <input type="radio" id="yes" name="answer" value="yes" class="btn" onclick="displayImage()">
-            <label for="yes" class="btn">Yes</label>
+            <label for="yes" class="btn">yes❤️</label>
         </div>
         
         <div class="btn-container">
             <input type="radio" id="no" name="answer" value="no" class="btn" onclick="displayImage()">
-            <label for="no" class="btn">No</label>
+            <label for="no" class="btn">no😔</label>
         </div>
 
-        <div id="imageContainer" style="display: none;">
+        <div id="imageContainer">
             <img id="resultImage" src="">
         </div>
 
@@ -91,12 +102,12 @@
 
                 if (answer === "yes") {
                     img.src = "/assets/images/yay.png"; // Set the path to your 'yes' image
-                    imgContainer.style.display = "block"; // Show the image container
+                    imgContainer.classList.add('show'); // Show the image container with fade-in effect
                     // Reset the position of the "No" button label
                     noLabel.style.position = "static";
                 } else {
                     img.src = "/assets/images/jn custom.png"; // Set the path to your 'no' image
-                    imgContainer.style.display = "block"; // Show the image container
+                    imgContainer.classList.add('show'); // Show the image container with fade-in effect
                 }
             }
 
