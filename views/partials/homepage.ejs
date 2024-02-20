@@ -147,6 +147,39 @@
             color: neonpink; /* Change color to neon pink */
         }
 
+        .gif-container {
+            display: none;
+            position: relative;
+            margin-top: 50px;
+        }
+        
+        .gif-container img {
+            max-width: 80%;
+            max-height: 80%;
+            position: fixed;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .gif1 {
+            top: 10%;
+            left: -2%;
+        }
+
+        .gif2 {
+            top: 50%;
+            left: 68%;
+        }
+
+        /* Animation for fading in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        
+        }
         /* Add more text styling as needed */
     </style>
 </head>
@@ -183,6 +216,50 @@
     <img src="/assets/images/heart.png" class="heart" alt="Heart image">
     <img src="/assets/images/heart.png" class="heart" alt="Heart image">
     <!-- Add more heart images as needed -->
+
+    <!-- Heart buttons -->
+    <button class="heart-btn">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+        <img src="/assets/images/heart.png" class="heart" alt="Heart image">
+    </button>
+    <!-- Add more heart buttons as needed -->
+
+    <!-- GIFs -->
+    <div class="gif-container">
+        <img src="/assets/images/winnie.gif" class="gif gif1" alt="GIF 1">
+        <img src="/assets/images/penguin.gif" class="gif gif2" alt="GIF 2">
+        <!-- Add more GIFs as needed -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const heartButtons = document.querySelectorAll('.heart-btn');
+        const gifContainer = document.querySelector('.gif-container');
+
+        heartButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                gifContainer.style.display = 'block';
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -47,7 +47,7 @@
 
         /* Enlarge "Yes" button on hover */
         #yes + label:hover {
-            transform: scale(3);
+            transform: scale(2);
         }
 
         /* Shrink "No" button on hover */
@@ -66,6 +66,7 @@
         #imageContainer {
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
+            margin-top: 50px; /* Adjust the margin-top value as needed */
         }
 
         /* Show image container when opacity is 1 */
@@ -101,7 +102,7 @@
                 var noLabel = noButton.nextElementSibling;
 
                 if (answer === "yes") {
-                    img.src = "/assets/images/yay.png"; // Set the path to your 'yes' image
+                    img.src = "/assets/images/bear.gif"; // Set the path to your 'yes' image
                     imgContainer.classList.add('show'); // Show the image container with fade-in effect
                     // Reset the position of the "No" button label
                     noLabel.style.position = "static";
