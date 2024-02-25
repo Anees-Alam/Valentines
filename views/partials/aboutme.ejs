@@ -7,8 +7,13 @@
     <style>
         body {
             height: 450px;
-            background: rgb(68, 245, 121);
-            background: linear-gradient(87.4deg, rgb(190, 227, 246) 1.9%, rgb(135, 225, 243) 49.7%, rgb(2, 230, 255) 100.5%);
+            /* background: rgb(68, 245, 121); */
+            background: linear-gradient(to right, 
+                    rgb(253, 205, 205),
+                    rgb(222, 192, 252),
+                    rgb(206, 192, 252),
+                    rgb(174, 192, 252),
+                    rgb(148, 225, 234));
         }
 
         .btn-container {
@@ -25,7 +30,7 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #ffffff;
+            background-color: #fdcdcd;
             border: 2px solid transparent;
             border-radius: 5px;
             transition: background-color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
@@ -34,12 +39,12 @@
 
         
         .btn:hover + label {
-            background-color: white;
+            background-color: #fdcdcd;
             box-shadow: 0px 0px 10px 0px rgba(255,0,255,1); /* Added glowing effect */
         }
 
         .btn:checked + label {
-            background-color: #f0f0f0;
+            background-color: #fdcdcd;
             border-color: #999999;
         }
 
@@ -61,17 +66,22 @@
         }*/
 
         h1 {
-            color: purple; /* Change the color to purple */
+            color: #94e1ea; /* Change the color to purple */
             font-size: 3em; /* Increase font size */
             font-weight: bold;
-            padding: 2%;
+            padding-top: 4%; 
+            padding-bottom: 4%;
+            text-shadow: -2px -2px 0 #000,  
+                         2px -2px 0 #000,
+                        -2px 2px 0 #000,
+                         2px 2px 0 #000;
         }
 
         /* Add transition for image container opacity */
         #imageContainer {
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
-            margin-top: 50px; /* Adjust the margin-top value as needed */
+            margin-top: 40px; /* Adjust the margin-top value as needed */
         }
 
         /* Show image container when opacity is 1 */
@@ -86,12 +96,12 @@
 
         <div class="btn-container">
             <input type="radio" id="yes" name="answer" value="yes" class="btn" onclick="displayImage()">
-            <label for="yes" class="btn">yes❤️</label>
+            <label for="yes" class="btn"><b>yes❤️</b></label>
         </div>
         
         <div class="btn-container">
             <input type="radio" id="no" name="answer" value="no" class="btn" onclick="displayImage()">
-            <label for="no" class="btn">no😔</label>
+            <label for="no" class="btn"><b>no😔</b></label>
         </div>
 
         <div id="imageContainer">

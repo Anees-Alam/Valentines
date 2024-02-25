@@ -11,7 +11,7 @@
 
         <li class="nav-item">
         <% if (title == "home") { %>
-          <a class="nav-link active" aria-current="page" href="/home">
+          <a class="nav-link active" aria-current="page" href="/home" style="color: #FFB6C1;">
         <% } else { %>
           <a class="nav-link" aria-current="page" href="/home">
         <% } %>
@@ -20,7 +20,7 @@
 
         <li class="nav-item">
         <% if (title == "about me") { %>
-          <a class="nav-link active" aria-current="page" href="/about"> 
+          <a class="nav-link active" aria-current="page" href="/about" style="color: #FFB6C1;"> 
         <% } else { %>
           <a class="nav-link" aria-current="page" href="/about"> 
         <% } %>
@@ -32,3 +32,21 @@
     </div>
   </div>
 </nav>
+
+<style>
+  .navbar-pink {
+    background-color: #800020; /* purple */
+  }
+  .nav-link {
+    color: #FFD700; /* Gold */
+    transition: font-size 0.2s; /* Smooth transition */
+    padding-right: 20px; /* Add padding to the right */
+    margin-right: 20px; /* Add margin to the right */
+  }
+  .nav-link:hover {
+    color: #FFD700; /* Gold */
+    font-size: 1.3em; /* Increase font size on hover */
+    padding-right: 20px; /* Add padding to the right */
+    margin-right: 20px; /* Add margin to the right */
+  }
+</style>

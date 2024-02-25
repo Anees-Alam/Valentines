@@ -8,7 +8,12 @@
         body {
             height: 100%; /* Set body height to fill the viewport */
             margin: 0; /* Remove default margin */
-            background: linear-gradient(87.4deg, rgb(190, 227, 246) 1.9%, rgb(135, 225, 243) 49.7%, rgb(2, 230, 255) 100.5%);
+            background: linear-gradient(to right, 
+                    rgb(253, 205, 205),
+                    rgb(222, 192, 252),
+                    rgb(206, 192, 252),
+                    rgb(174, 192, 252),
+                    rgb(148, 225, 234));
             position: relative; /* Position relative to allow absolute positioning of hearts */
         }
 
@@ -29,105 +34,105 @@
 
         /* Position heart images around the background */
         .heart:nth-child(1) {
-            top: 55%;
+            top: 50%;
             left: 48%;
         }
 
         .heart:nth-child(2) {
-            top: 45%;
+            top: 40%;
             left: 43%;
         }
 
         .heart:nth-child(3) {
-            top: 40%;
+            top: 35%;
             left: 38%;
         }
 
         /* Add more .heart:nth-child() rules as needed */
         .heart:nth-child(4) {
-            top: 45%;
+            top: 40%;
             left: 33%;
         }
 
         .heart:nth-child(5) {
-            top: 60%;
+            top: 55%;
             left: 29%;
         }
 
         .heart:nth-child(6) {
-            top: 80%;
+            top: 75%;
             left: 30%;
         }
 
         .heart:nth-child(7) {
-            top: 95%;
+            top: 90%;
             left: 33%;
         }
 
         .heart:nth-child(8) {
-            top: 110%;
+            top: 105%;
             left: 38%;
         }
 
         /* Add more .heart:nth-child() rules as needed */
         .heart:nth-child(9) {
-            top: 120%;
+            top: 115%;
             left: 43%;
         }
 
         .heart:nth-child(10) {
-            top: 135%;
+            top: 130%;
             left: 48%;
         }
         .heart:nth-child(11) {
-            top: 55%;
+            top: 50%;
             left: 48%;
         }
 
         .heart:nth-child(12) {
-            top: 45%;
+            top: 40%;
             left: 53%;
         }
 
         .heart:nth-child(13) {
-            top: 40%;
+            top: 35%;
             left: 58%;
         }
 
         /* Add more .heart:nth-child() rules as needed */
         .heart:nth-child(14) {
-            top: 45%;
+            top: 40%;
             left: 63%;
         }
 
         .heart:nth-child(15) {
-            top: 60%;
+            top: 55%;
             left: 67%;
         }
 
         .heart:nth-child(16) {
-            top: 80%;
+            top: 75%;
             left: 66%;
         }
 
         .heart:nth-child(17) {
-            top: 95%;
+            top: 90%;
             left: 63%;
         }
 
         .heart:nth-child(18) {
-            top: 110%;
+            top: 105%;
             left: 58%;
         }
 
         /* Add more .heart:nth-child() rules as needed */
         .heart:nth-child(19) {
-            top: 120%;
+            top: 115%;
             left: 53%;
         }
 
         .heart:nth-child(20) {
-            top: 135%;
+            top: 130%;
             left: 48%;
         }
 
@@ -138,9 +143,21 @@
 /* Additional styles for text */
         h1.display-4 {
             font-size: 2.6em; /* Increase font size */
-            color: salmon; /* Change color to neon pink */
+            color: #94e1ea; /* Change color to neon pink */
             font-weight: bold;
         }
+
+        /* Additional styles for text */
+        .text-container {
+            /* color: #94e1ea;  Neon pink */
+            font-weight: bold;
+            /* Add text shadow for black outline */
+            text-shadow: -2px -2px 0 #000,  
+                         2px -2px 0 #000,
+                        -2px 2px 0 #000,
+                         2px 2px 0 #000;
+        }
+
 
         p {
             font-size: 1.2em; /* Increase font size */
@@ -187,9 +204,11 @@
     <main>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4"><b><br><br>Happy Valentines Day</b></h1>
-                <p> <br><br></p>
-                <p>  <b></b> <b> <b> <b>  </p>
+                <div class="text-container">
+                    <h1 class="display-4"><b><br><br>Happy Valentines Day</b></h1>
+                    <p> <br><br></p>
+                    <p>  <b></b> <b> <b> <b>  </p>
+                </div>
             </div>
         </div>
     </main>
