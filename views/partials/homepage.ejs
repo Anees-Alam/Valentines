@@ -187,6 +187,16 @@
             left: 68%;
         }
 
+        .gif3 {
+            top: 50%;
+            left: 0%;
+        }
+
+        .gif4 {
+            top: 13%;
+            left: 75%;
+        }
+
         /* Animation for fading in */
         @keyframes fadeIn {
             from {
@@ -269,20 +279,35 @@
     <div class="gif-container">
         <img src="/assets/images/winnie.gif" class="gif gif1" alt="GIF 1">
         <img src="/assets/images/penguin.gif" class="gif gif2" alt="GIF 2">
+        <img src="/assets/images/valentines.gif" class="gif gif3" alt="GIF 3">
+        <img src="/assets/images/gif4.gif" class="gif gif4" alt="GIF 4">
         <!-- Add more GIFs as needed -->
     </div>
 
-    <!-- JavaScript -->
     <script>
-        const heartButtons = document.querySelectorAll('.heart-btn');
-        const gifContainer = document.querySelector('.gif-container');
+    const heartButtons = document.querySelectorAll('.heart-btn');
+    const gifContainer = document.querySelector('.gif-container');
+    const gifs = document.querySelectorAll('.gif');
 
-        heartButtons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                gifContainer.style.display = 'block';
+    let currentGifIndex = 0;
+
+    heartButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            // Toggle the display of the GIF container
+            gifContainer.style.display = 'block';
+
+            // Hide all GIFs
+            gifs.forEach(gif => {
+                gif.style.display = 'none';
             });
+
+            // Show the current GIF and update the index for the next click
+            gifs[currentGifIndex].style.display = 'block';
+            currentGifIndex = (currentGifIndex + 1) % gifs.length;
         });
-    </script>
+    });
+</script>
+
 
 </body>
 </html>
