@@ -3,92 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content/aboutme.css">
     <title>Yes/No Question</title>
-    <style>
-        body {
-            height: 450px;
-            /* background: rgb(68, 245, 121); */
-            background: linear-gradient(to right, 
-                    rgb(253, 205, 205),
-                    rgb(222, 192, 252),
-                    rgb(206, 192, 252),
-                    rgb(174, 192, 252),
-                    rgb(148, 225, 234));
-        }
-
-        .btn-container {
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: none;
-        }
-
-        .btn + label {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #fdcdcd;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            transition: background-color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
-            margin-right: 10px;
-        }
-
-        
-        .btn:hover + label {
-            background-color: #fdcdcd;
-            box-shadow: 0px 0px 10px 0px rgba(255,0,255,1); /* Added glowing effect */
-        }
-
-        .btn:checked + label {
-            background-color: #fdcdcd;
-            border-color: #999999;
-        }
-
-        /*
-        #yes:checked + label, #yes + label:hover {
-            background-color: pink;
-            border-color: #999999;
-        }
-        */
-
-        /* Enlarge "Yes" button on hover */
-        #yes + label:hover {
-            transform: scale(2);
-        }
-
-        /* Shrink "No" button on hover */
-        /*#no + label:hover {
-            transform: scale(0.01);
-        }*/
-
-        h1 {
-            color: #94e1ea; /* Change the color to purple */
-            font-size: 3em; /* Increase font size */
-            font-weight: bold;
-            padding-top: 4%; 
-            padding-bottom: 4%;
-            text-shadow: -2px -2px 0 #000,  
-                         2px -2px 0 #000,
-                        -2px 2px 0 #000,
-                         2px 2px 0 #000;
-        }
-
-        /* Add transition for image container opacity */
-        #imageContainer {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            margin-top: 40px; /* Adjust the margin-top value as needed */
-        }
-
-        /* Show image container when opacity is 1 */
-        #imageContainer.show {
-            opacity: 1;
-        }
-    </style>
+    
 </head>
 <body>
     <audio controls autoplay loop style="height: 0px; background-color: transparent;">
